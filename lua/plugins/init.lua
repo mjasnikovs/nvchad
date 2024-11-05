@@ -23,11 +23,12 @@ return {
 	},
 	{
 		'nvim-tree/nvim-tree.lua',
-		opts = function()
-			vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache' }
-			vim.g.nvim_tree_width = 60
-			vim.g.nvim_tree_quit_on_open = 1
-		end,
+		opts = {
+			view = {
+				side = 'left',
+				width = 50,
+			},
+		},
 	},
 
 	-- {
