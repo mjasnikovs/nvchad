@@ -16,6 +16,11 @@ for _, lsp in ipairs(servers) do
 	}
 end
 
+lspconfig.gdscript.setup {
+ 	name = "godot",
+    cmd = {"ncat", "127.0.0.1", "6005"}
+}
+
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
 --   on_attach = nvlsp.on_attach,

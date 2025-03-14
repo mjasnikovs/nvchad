@@ -31,13 +31,17 @@ return {
 		},
 	},
 
-	-- {
-	-- 	"nvim-treesitter/nvim-treesitter",
-	-- 	opts = {
-	-- 		ensure_installed = {
-	-- 			"vim", "lua", "vimdoc",
-	--      "html", "css"
-	-- 		},
-	-- 	},
-	-- },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		opts = {
+			ensure_installed = {
+				"vim", "lua", "vimdoc", "html", "css", "gdscript", "godot_resource", "gdshader"
+			},
+			auto_install = true,
+			prefer_git = true,
+			highlight = { enable = true },
+			indent = { enable = true }
+
+		},
+	},
 }

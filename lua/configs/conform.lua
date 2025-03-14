@@ -10,6 +10,9 @@ local options = {
 		json = { 'prettier' },
 		markdown = { 'prettier' },
 		graphql = { 'prettier' },
+		gdscript = { 'prettier' },
+		godot_resource = { 'prettier' },
+		gdshader = { 'prettier' }
 	},
 
 	format_on_save = {
