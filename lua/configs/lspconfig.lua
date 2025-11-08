@@ -5,6 +5,12 @@ require('nvchad.configs.lspconfig').defaults()
 local servers = { 'html', 'cssls', 'ts_ls', 'eslint' }
 local nvlsp = require 'nvchad.configs.lspconfig'
 
+vim.lsp.config('*', {
+	flags = {
+		debounce_text_changes = 150,
+	},
+})
+
 -- lsps with default config
 for _, lsp in ipairs(servers) do
 	vim.lsp.config(lsp, {
@@ -12,6 +18,7 @@ for _, lsp in ipairs(servers) do
 		on_init = nvlsp.on_init,
 		capabilities = nvlsp.capabilities,
 	})
+	vim.lsp.enable(lsp)
 end
 
 vim.lsp.config('gdscript', {
